@@ -6,6 +6,12 @@ import { ProfileComponent } from './authentication/profile/profile.component';
 import { WebapiComponent } from './authentication/webapi/webapi.component';
 import { UsuarioComponent } from './business/usuario/usuario.component';
 import { DashboardComponent } from './business/dashboard/dashboard.component';
+import  VerificacionComponent  from './business/verificacion/verificacion.component';
+import RegistroComponent from './business/registro/registro.component';
+import { ReportesComponent } from './business/reportes/reportes.component';
+import {AgregarTrabajadorComponent} from './shared/components/agregar-trabajador/agregar-trabajador.component';
+
+
 
 const routes: Routes = [
   {
@@ -13,8 +19,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'profile',
-    component: ProfileComponent,
+    path: 'verificacion',
+    component: VerificacionComponent,
     canActivate: [MsalGuard]
   },
   {
@@ -24,14 +30,31 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent,
-    canActivate: [MsalGuard]
+    component: DashboardComponent
   },
   {
     path: 'usuario',
     component: UsuarioComponent,
     canActivate: [MsalGuard]
+  },
+  {
+    path: 'registro',
+    component: RegistroComponent,
+    canActivate: [MsalGuard]
+  },
+  {
+    path: 'reportes',
+    component: ReportesComponent,
+    canActivate: [MsalGuard]
+  },
+  {
+    path:'agregar-trabajador',
+    component: AgregarTrabajadorComponent,
+    canActivate: [MsalGuard]
   }
+  
+  
+  
 ];
 
 @NgModule({

@@ -34,6 +34,10 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { LayoutComponent } from './shared/components/layout/layout.component';
+import { MatPaginator } from '@angular/material/paginator';
+import { ReportesComponent } from './business/reportes/reportes.component';
+
+
 
 
 /* Changes end here. */
@@ -44,11 +48,15 @@ import { LayoutComponent } from './shared/components/layout/layout.component';
     ProfileComponent,
     HomeComponent,
     WebapiComponent,
+    ReportesComponent,
+
+  
+
   ],
   imports: [
     BrowserModule,
     LayoutComponent,
-
+    MatPaginator,
     AppRoutingModule,
 
     /* Changes start here. */
